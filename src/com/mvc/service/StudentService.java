@@ -15,7 +15,9 @@ public class StudentService {
 	}
     public Optional<Student> getStudent(int id) {
       for(int i = 0; i<= students.size(); i++) {
-    	  
+    	  if(students.get(i).getId() == id) {
+  			return Optional.of(students.get(i));
+  		}
       }
 	return null;
     }
